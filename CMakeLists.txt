@@ -48,7 +48,7 @@ PROPERTIES
 include(GoogleTest)
 gtest_discover_tests(trace_test)
 
-if (enable_coverage_data AND ${CMAKE_PROJECT_NAME} EQUAL mbedTrace)
+if (enable_coverage_data AND ${CMAKE_PROJECT_NAME} STREQUAL "mbedTrace")
     file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/html")
 
     add_test(NAME trace_cov WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}

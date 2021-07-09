@@ -23,6 +23,6 @@ FetchContent_Declare(nanostack_libservice_decl
     GIT_TAG             "cmake_refactor"
 )
 
-if (${CMAKE_PROJECT_NAME} EQUAL mbedTrace)
+if (${CMAKE_PROJECT_NAME} STREQUAL "mbedTrace")
     FetchContent_MakeAvailable(nanostack_libservice_decl)
 endif()
